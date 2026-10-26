@@ -1,0 +1,565 @@
+/* Shared semantic colors keep every screen in the same dark/light system. */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0c0a17;
+  --surface: #19152a;
+  --surface-raised: #231d38;
+  --field: #131020;
+  --hover: #2c2344;
+  --ink: #f2effb;
+  --muted: #b0a6c5;
+  --subtle: #968aaa;
+  --line: #30283f;
+  --accent: #ae80ff;
+  --blue: #ae80ff;
+  --accent-surface: #31224e;
+  --cyan: #65c9ed;
+  --incoming-bg: #172e3b;
+  --outgoing-bg: #302147;
+  --success: #7edbc3;
+  --success-bg: #15312f;
+  --danger: #ff9eaf;
+  --danger-bg: #3c202e;
+  --balance-start: #221831;
+  --balance-end: #382554;
+  --shadow: 0 10px 28px #00000012;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --canvas: #f5f6fc;
+  --surface: #ffffff;
+  --surface-raised: #f1effa;
+  --field: #f8f9fe;
+  --hover: #ece8f8;
+  --ink: #282138;
+  --muted: #6d627f;
+  --subtle: #80728e;
+  --line: #e4dfef;
+  --accent: #7444cc;
+  --blue: #7444cc;
+  --accent-surface: #eee5fb;
+  --cyan: #176d9e;
+  --incoming-bg: #e5f3fc;
+  --outgoing-bg: #efe6fc;
+  --success: #196950;
+  --success-bg: #e5f6ef;
+  --danger: #a73050;
+  --danger-bg: #fdebf0;
+  --balance-start: #211831;
+  --balance-end: #493066;
+  --shadow: 0 5px 22px #32244805;
+}
+html,
+body {
+  background: var(--canvas);
+  color: var(--ink);
+}
+.sidebar {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--muted);
+}
+.brand,
+.profile strong,
+.breadcrumb strong,
+.page-heading h1,
+h2,
+.metric strong,
+.transaction-info strong,
+.boot-state h1 {
+  color: var(--ink);
+}
+.brand-light,
+.nav-caption,
+.sidebar-version,
+.demo-label,
+.profile small,
+.sidebar-note p,
+.sidebar nav a,
+.breadcrumb,
+.breadcrumb span,
+.page-heading p,
+.eyebrow,
+.heading-context,
+.heading-context strong,
+.workspace-label,
+.account-number,
+.account-tab-detail,
+.statement-meta,
+.table-heading,
+.transaction-info small,
+.transaction-right small,
+.metric > div > span,
+.metric small,
+.operation label,
+.description-label span,
+.operation-hint,
+.status-control,
+.status-control button,
+.insight p,
+.rule-row,
+.rule-row strong,
+.learning-note,
+.learning-note strong,
+.learning-note p,
+footer,
+footer > span,
+.footer-brand,
+.footer-brand span,
+.account-dialog p,
+.account-dialog label,
+.empty,
+.empty p {
+  color: var(--muted);
+}
+.sidebar nav a:hover {
+  color: var(--ink);
+  background: var(--hover);
+}
+.sidebar nav a.nav-active {
+  color: var(--accent);
+  background: var(--accent-surface);
+}
+.nav-indicator,
+.workspace-label i,
+.local-badge i,
+.account-tab.active .account-dot {
+  background: var(--accent);
+}
+.brand-mark,
+.boot-logo {
+  background: linear-gradient(135deg, #ae6af1, #6850d8);
+  color: white;
+  box-shadow: none;
+}
+.avatar {
+  background: var(--accent-surface);
+  color: var(--accent);
+}
+.topbar,
+.sidebar-bottom,
+footer {
+  border-color: var(--line);
+}
+.local-badge,
+.text-button {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--muted);
+}
+.text-button:hover {
+  background: var(--hover);
+  color: var(--accent);
+}
+.panel,
+.metric {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+.account-tab {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--muted);
+  box-shadow: none;
+}
+.account-tab.active {
+  background: var(--accent-surface);
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+  color: var(--ink);
+  box-shadow: none;
+}
+.account-tab.active .account-tab-detail {
+  color: var(--accent);
+}
+.account-tab-name {
+  color: inherit;
+}
+.account-dot {
+  background: var(--subtle);
+}
+.account-tabs {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  scroll-snap-type: x proximity;
+}
+.account-tab {
+  scroll-snap-align: start;
+}
+.balance-card,
+.theme-business,
+.theme-bonus {
+  background:
+    radial-gradient(ellipse at 100% 0, #9660d92b, transparent 60%),
+    linear-gradient(115deg, var(--balance-start), var(--balance-end));
+  border: 1px solid #65448155;
+  box-shadow: none;
+}
+.balance-value,
+.balance-owner > span {
+  color: #faf7ff;
+}
+.balance-label,
+.balance-owner small,
+.account-details-label,
+.account-details > div {
+  color: #c2b4d7;
+}
+.account-details > strong {
+  color: #f0e6ff;
+}
+.account-details {
+  border-color: #ffffff1c;
+}
+.status-pill {
+  background: #66beaa15;
+  color: #a0e5ce;
+  border-color: #66beaa24;
+}
+.status-pill i {
+  background: #80cfb8;
+}
+.status-pill.inactive {
+  color: #ffa4b6;
+  background: #72344855;
+  border-color: #ffa4b630;
+}
+.metric-icon.incoming,
+.transaction-icon.incoming {
+  background: var(--incoming-bg);
+  color: var(--cyan);
+}
+.metric-icon.outgoing,
+.transaction-icon.outgoing {
+  background: var(--outgoing-bg);
+  color: var(--accent);
+}
+.positive {
+  color: var(--cyan) !important;
+}
+.transaction-right > strong {
+  color: var(--ink);
+}
+.table-heading,
+.transaction,
+.status-control,
+.rule-row,
+.insight button {
+  border-color: var(--line);
+}
+.session-badge {
+  color: var(--subtle);
+}
+.operation-tabs {
+  background: var(--field);
+  border-color: var(--line);
+}
+.operation-tabs button {
+  color: var(--muted);
+  background: transparent;
+}
+.operation-tabs button:hover {
+  color: var(--ink);
+  background: var(--hover);
+}
+.operation-tabs button.selected {
+  color: var(--accent);
+  background: var(--surface-raised);
+  box-shadow: none;
+}
+.money-input,
+.description-input,
+.history-tools input,
+.history-tools select,
+.account-dialog input,
+.account-dialog select {
+  color: var(--ink);
+  background: var(--field);
+  border-color: var(--line);
+}
+.money-input input {
+  color: var(--ink);
+  background: transparent;
+}
+.money-input > span {
+  color: var(--muted);
+}
+.money-input input::placeholder,
+.description-input::placeholder,
+.history-tools input::placeholder,
+.account-dialog input::placeholder {
+  color: var(--subtle);
+  opacity: 1;
+}
+.money-input:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.presets button {
+  color: var(--muted);
+  background: var(--field);
+  border-color: var(--line);
+}
+.presets button:hover {
+  color: var(--accent);
+  background: var(--accent-surface);
+  border-color: var(--accent);
+}
+.submit,
+.primary-small {
+  background: linear-gradient(110deg, #9454dc, #6553d9);
+  color: #fff;
+  box-shadow: none;
+}
+.submit:hover,
+.primary-small:hover {
+  background: linear-gradient(110deg, #a365ed, #7867e8);
+}
+.submit:disabled {
+  opacity: 0.45;
+}
+.notice.success {
+  background: var(--success-bg);
+  color: var(--success);
+}
+.notice.error,
+.dialog-error {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.status-control i {
+  background: var(--success);
+}
+.status-control i.off {
+  background: var(--danger);
+}
+.insight {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.insight h2 {
+  color: var(--ink);
+}
+.insight button,
+.show-all {
+  color: var(--accent);
+}
+.show-all {
+  background: transparent;
+  border-color: var(--line);
+}
+.learning-note > svg {
+  color: var(--subtle);
+}
+.account-dialog {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+  box-shadow: 0 25px 90px #00000055;
+}
+.account-dialog::backdrop {
+  background: #08051199;
+  backdrop-filter: blur(7px);
+}
+.dialog-header button {
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+.boot-state {
+  color: var(--muted);
+}
+.mobile-nav {
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  border-color: var(--line);
+  box-shadow: none;
+}
+.mobile-nav a {
+  color: var(--muted);
+}
+.mobile-nav a.active {
+  color: var(--accent);
+}
+.theme-switch {
+  display: inline-flex;
+  padding: 3px;
+  gap: 3px;
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+.theme-switch button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  border-radius: 6px;
+  min-height: 30px;
+  padding: 5px 9px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+}
+.theme-switch button .icon {
+  width: 14px;
+  height: 14px;
+}
+.theme-switch button[aria-pressed="true"] {
+  background: var(--accent-surface);
+  color: var(--accent);
+}
+.theme-switch button:hover {
+  background: var(--hover);
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+.account-dialog input:focus-visible,
+.account-dialog select:focus-visible {
+  outline-color: var(--accent);
+}
+::selection {
+  background: var(--accent-surface);
+  color: var(--ink);
+}
+@media (max-width: 780px) {
+  .topbar-right .local-badge {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .topbar-right {
+    gap: 9px;
+  }
+  .theme-switch button {
+    min-height: 32px;
+    padding: 5px 7px;
+    font-size: 10px;
+  }
+  .theme-switch button .icon {
+    width: 13px;
+    height: 13px;
+  }
+  .topbar .breadcrumb {
+    font-size: 10px;
+  }
+  .topbar .breadcrumb span {
+    margin: 0 5px;
+  }
+  .theme-switch {
+    padding: 2px;
+    gap: 2px;
+  }
+}
+@media (max-width: 370px) {
+  .theme-switch button {
+    padding: 5px 8px;
+  }
+  .theme-switch button > span {
+    display: none;
+  }
+  .theme-switch button .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .theme-switch button {
+    min-height: 40px;
+    min-width: 40px;
+    justify-content: center;
+  }
+}
+/* Aurora identity: sunrise, horizon and a violet-to-cyan spectrum. */
+.brand {
+  padding: 0 6px;
+  letter-spacing: normal;
+}
+.brand-wordmark {
+  width: 174px;
+  height: auto;
+  display: block;
+}
+.brand-for-light {
+  display: none;
+}
+:root[data-theme="light"] .brand-for-light {
+  display: block;
+}
+:root[data-theme="light"] .brand-for-dark {
+  display: none;
+}
+.mobile-brand-symbol {
+  display: none;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+}
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.footer-brand img {
+  width: 27px;
+  height: 27px;
+}
+.footer-brand > span {
+  margin-left: -6px;
+}
+.boot-brand {
+  width: 66px;
+  height: 66px;
+}
+@media (max-width: 1000px) and (min-width: 641px) {
+  .sidebar .brand {
+    width: 42px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .sidebar .brand-wordmark {
+    width: 190px;
+    max-width: none;
+    height: 47px;
+    object-fit: cover;
+    object-position: left;
+  }
+  .sidebar .brand-wordmark {
+    content: url("/brand/aurora-symbol.svg?v=2");
+    width: 42px;
+    height: 42px;
+  }
+  .sidebar .brand-for-light {
+    display: none;
+  }
+  :root[data-theme="light"] .sidebar .brand-for-dark {
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .mobile-brand-symbol {
+    display: block;
+  }
+  .topbar .breadcrumb {
+    font-size: 0;
+  }
+  .topbar .breadcrumb > span,
+  .topbar .breadcrumb > strong {
+    display: none;
+  }
+  .mobile-brand-symbol {
+    width: 33px;
+    height: 33px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 641px) {
+  :root[data-theme="light"] .sidebar .brand-for-light {
+    display: none;
+  }
+}

@@ -1,0 +1,437 @@
+/* Final layout: consistent rhythm, legible small type and real activity data. */
+main {
+  max-width: 1800px;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.page-heading {
+  padding: 32px 0 25px;
+}
+.page-heading h1 {
+  font-size: 32px;
+}
+.page-heading p {
+  font-size: 13px;
+}
+.workspace-actions {
+  margin-bottom: 18px;
+}
+.account-bar {
+  margin-bottom: 24px;
+}
+.account-tab {
+  min-height: 58px;
+}
+.dashboard {
+  gap: 24px;
+}
+.main-column,
+.side-column {
+  min-width: 0;
+}
+.balance-card {
+  min-height: 232px;
+  padding: 28px;
+  border-radius: 16px;
+}
+.balance-value {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+.balance-owner {
+  margin-top: 24px;
+}
+.panel {
+  border-radius: 16px;
+  padding: 26px;
+}
+.metrics {
+  margin-top: 18px;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+.metric {
+  padding: 20px;
+  border-radius: 13px;
+}
+.metric > div > span {
+  font-size: 12px;
+}
+.metric strong {
+  font-size: 23px;
+}
+.metric small {
+  font-size: 10px;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.25px;
+}
+h2 {
+  font-size: 20px;
+}
+.statement {
+  margin-top: 20px;
+}
+.transaction-info strong {
+  font-size: 13px;
+}
+.transaction-info small {
+  font-size: 11px;
+}
+.transaction-right > strong {
+  font-size: 13px;
+}
+.transaction-right small {
+  font-size: 10px;
+}
+.table-heading {
+  font-size: 10px;
+}
+.statement-meta {
+  font-size: 11px;
+}
+.operation-hint p {
+  font-size: 12px;
+}
+.operation label {
+  font-size: 12px;
+}
+.operation-tabs button {
+  min-height: 44px;
+}
+.operation-tabs button .icon {
+  width: 16px;
+  height: 16px;
+}
+.status-control {
+  font-size: 11px;
+}
+.status-control button {
+  font-size: 12px;
+  min-height: 36px;
+}
+.presets button {
+  font-size: 11px;
+  min-height: 38px;
+}
+.insight p,
+.rule-row strong {
+  font-size: 12px;
+}
+.rule-row > span {
+  font-size: 11px;
+}
+.learning-note p {
+  font-size: 11px;
+}
+.learning-note strong {
+  font-size: 12px;
+}
+.cashflow-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cashflow h2 {
+  font-size: 18px;
+  margin: 8px 0 0;
+}
+.period-tag {
+  font-size: 10px;
+  color: var(--muted);
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.cashflow-content {
+  display: grid;
+  grid-template-columns: minmax(145px, 0.8fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+.flow-summary > span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.flow-summary > strong {
+  display: block;
+  font-size: 24px;
+  letter-spacing: -0.6px;
+  color: var(--ink);
+  margin-top: 9px;
+}
+.chart-legend {
+  display: flex;
+  gap: 12px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 18px;
+}
+.chart-legend > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chart-legend i {
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+}
+.legend-in,
+.flow-in {
+  background: var(--cyan);
+  fill: var(--cyan);
+}
+.legend-out,
+.flow-out {
+  background: var(--accent);
+  fill: var(--accent);
+}
+.flow-chart {
+  color: var(--muted);
+  min-width: 0;
+}
+.flow-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.flow-chart text {
+  fill: var(--muted);
+  font-size: 9px;
+  font-family: inherit;
+}
+.flow-chart rect {
+  transition:
+    height 0.2s ease,
+    y 0.2s ease;
+}
+.learning-note {
+  margin-top: 22px;
+}
+.account-tabs {
+  padding-bottom: 7px;
+}
+.brand-wordmark {
+  width: 180px;
+}
+footer > span {
+  font-size: 10px;
+}
+@media (max-width: 1200px) {
+  main {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .dashboard {
+    gap: 20px;
+  }
+  .panel {
+    padding: 22px;
+  }
+  .cashflow-content {
+    gap: 16px;
+  }
+  .flow-summary > strong {
+    font-size: 21px;
+  }
+  .account-details {
+    display: none;
+  }
+  .transaction-info small {
+    font-size: 10px;
+  }
+  .transaction-right small {
+    font-size: 9px;
+  }
+}
+@media (max-width: 780px) {
+  main {
+    padding: 0 22px;
+  }
+  .dashboard {
+    grid-template-columns: minmax(0, 1fr) minmax(270px, 0.92fr);
+    gap: 16px;
+  }
+  .panel {
+    padding: 18px;
+  }
+  .cashflow-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .chart-legend {
+    margin-top: 12px;
+  }
+  .metric strong {
+    font-size: 20px;
+  }
+}
+@media (max-width: 640px) {
+  main {
+    margin: 0;
+    padding: 0 20px;
+  }
+  .page-heading {
+    padding: 26px 0 24px;
+  }
+  .page-heading h1 {
+    font-size: 29px;
+  }
+  .page-heading p {
+    font-size: 12px;
+  }
+  .dashboard {
+    gap: 18px;
+  }
+  .account-tab {
+    min-height: 56px;
+  }
+  .balance-card {
+    padding: 24px;
+    min-height: 225px;
+  }
+  .balance-value {
+    font-size: 38px;
+  }
+  .metrics {
+    margin: 0;
+    gap: 12px;
+  }
+  .metric {
+    padding: 20px 15px;
+  }
+  .metric strong {
+    font-size: 21px;
+  }
+  .panel {
+    padding: 22px;
+  }
+  .cashflow {
+    order: 4;
+  }
+  .statement {
+    order: 5;
+    margin: 0;
+  }
+  .insight {
+    order: 6;
+  }
+  .learning-note {
+    order: 7;
+    margin-top: 0;
+  }
+  .cashflow-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .flow-summary > strong {
+    font-size: 26px;
+  }
+  .flow-summary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+  .flow-summary > strong {
+    grid-column: 1;
+  }
+  .chart-legend {
+    grid-column: 2;
+    grid-row: 1/3;
+    margin: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .transaction-info strong,
+  .transaction-right > strong {
+    font-size: 12px;
+  }
+  .transaction-info small {
+    font-size: 10px;
+  }
+  .transaction-right small {
+    font-size: 9px;
+  }
+  .status-control {
+    font-size: 11px;
+  }
+  .insight h2 {
+    font-size: 18px;
+  }
+  .period-tag {
+    font-size: 9px;
+  }
+  .text-button {
+    min-height: 36px;
+  }
+  .learning-note p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 370px) {
+  main {
+    padding: 0 15px;
+  }
+  .panel {
+    padding: 18px;
+  }
+  .balance-value {
+    font-size: 34px;
+  }
+  .metric strong {
+    font-size: 19px;
+  }
+  .transaction {
+    gap: 8px;
+  }
+  .transaction-info small {
+    font-size: 9px;
+  }
+  .transaction-right > strong {
+    font-size: 11px;
+  }
+  .cashflow h2 {
+    font-size: 17px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flow-chart rect {
+    transition: none;
+  }
+}
+@media (max-width: 640px) {
+  .workspace-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .workspace-label {
+    max-width: none;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .workspace-actions > div {
+    width: 100%;
+    gap: 10px;
+  }
+  .workspace-actions button {
+    flex: 1;
+    min-height: 40px;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  .workspace-actions button .icon {
+    width: 16px;
+    height: 16px;
+  }
+}

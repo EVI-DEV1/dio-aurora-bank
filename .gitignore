@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.log
+
+data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+# Arquivos locais de trabalho
+
+design/visual-*.zip
+design/aurora-logo-anterior.zip
+design/*v1*.png
+design/*v2*.png
+design/*-v4.png
+design/*-v5.png
+design/LEIA-ME.md
+ENTREGA-DIO.md
+.env
+.env.*
+!.env.example

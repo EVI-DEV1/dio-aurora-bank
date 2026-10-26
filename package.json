@@ -1,0 +1,25 @@
+{
+  "name": "aurora-bank",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --experimental-strip-types --test tests/*.test.ts tests/*.test.mjs",
+    "demo": "node --experimental-strip-types app.ts",
+    "start": "node --experimental-strip-types server/index.ts",
+    "test:store": "node --experimental-strip-types --test tests/store.test.ts",
+    "format": "prettier --write src server scripts tests app.ts vite.config.ts package.json tsconfig.json index.html",
+    "check": "prettier --check src server scripts tests app.ts vite.config.ts package.json tsconfig.json index.html"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
