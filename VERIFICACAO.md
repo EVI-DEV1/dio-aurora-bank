@@ -36,3 +36,7 @@ Foram inspecionados os layouts e os arquivos de marca. As referências SVG são 
 ## Limites
 
 Essas verificações não constituem auditoria formal de acessibilidade ou segurança. Não foram feitos teste de carga, teste com leitor de tela ou homologação para operações financeiras reais. A aplicação usa dados fictícios, execução local e não possui autenticação multiusuário.
+
+## Reprodução a partir do GitHub
+
+Uma cópia nova do repositório foi instalada com npm ci: os 14 testes e o build passaram. O repositório define quebras de linha em .gitattributes para que o Git no Windows não converta os arquivos de código para CRLF e provoque divergência de formatação.
